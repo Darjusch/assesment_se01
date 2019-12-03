@@ -1,3 +1,6 @@
+import os
+import sys
+
 
 class SlidingPuzzle:
     def __init__(self):
@@ -136,3 +139,17 @@ class SlidingPuzzle:
                     break
 
 puzzle = SlidingPuzzle()
+
+class AutoPlayer():
+    def __init__(self):
+        self.auto_player()
+
+    def auto_player(self):
+        self.find_best_solution()
+
+    def find_best_solution(self):
+        '''
+        Quicksort algorithm
+        '''
+
+auto_player = AutoPlayer()
