@@ -15,8 +15,9 @@ Rules:<br/>
 You can type in the number of the piece you want to move to move it.<br/>
 It has to be a number between 1 and 8 (inculding them).<br/>
 In order to win you have to bring the puzzle in the following state:<br/>
-[1,2,3]<br/>                             
-[4,5,6]<br/>
-[7,8,0]<br/>
 
+[1,2,3,4],<br/>
+[5,6,7,8],<br/>
+[9,10,11,12],<br/>
+[13,14,15,0]<br/>
 Happy Puzzling!
