@@ -7,13 +7,15 @@ class SlidingPuzzle:
             [4,9,10,7],
             [3,14,13,0]
         ]
+
         '''
         Easy testing for win condition.
         Replace self.puzzle_horizontal with this one and you have to move only one piece
             self.puzzle_horizontal = [
-            [1,2,3],
-            [4,5,6],
-            [7,0,8]
+            [1,2,3,4],
+            [5,6,7,8],
+            [9,10,11,12],
+            [13,14,0,15]
         ]
         '''
 
@@ -42,8 +44,11 @@ class SlidingPuzzle:
             print('You won the Game !')
             print('Play another Round')
         piece_to_be_moved = int(input(f'Please chose which puzzle piece you want to move by typing the number of it: '))
-        if piece_to_be_moved < 1 or piece_to_be_moved > 15:
-            self.user_input_and_choices()
+        try:
+            if piece_to_be_moved < 1 or piece_to_be_moved > 15:
+                self.user_input_and_choices()
+        except Exception as e:
+            print(e)
         if self.is_valid_move(piece_to_be_moved, self.puzzle_horizontal):
             self.swap_places_horizontal(piece_to_be_moved)
             self.swap_places_vertical(piece_to_be_moved)
